@@ -24,10 +24,8 @@ test("@Web Client App login", async ({ page }) => {
       break;
     }
   }
-  //   await page.pause();
 
   await page.locator("[routerlink*='cart']").click();
-
   await page.locator("div li").first().waitFor();
   const bool = await page.locator("h3:has-text('zArA cOat 3')").isVisible();
   expect(bool).toBeTruthy();
